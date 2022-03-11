@@ -1,9 +1,9 @@
 import React, {useState} from 'react'
 
 function Form() {
-   
-/*     const [guests, setGuests] = useState([])
- */    //hook to allow guests to RSVP with their info
+    
+    const [guests, setGuests] = useState([])
+    //hook to allow guests to RSVP with their info
     const [guest, setGuest] = useState({
       firstName: "",
       lastName: "",
@@ -25,6 +25,22 @@ function Form() {
             lastName: e.target.value
         })
     }
+
+    const handleFood = (e) => {
+        setGuest({
+            ...guest,
+            food: e.target.value
+        })
+    }
+
+    const handleSong = (e) => {
+        setGuest({
+            ...guest,
+            song: e.target.value
+        })
+    }
+
+    
   
   return (
     <form>
@@ -44,11 +60,17 @@ function Form() {
         />
         <input 
             placeholder='Ev. matpreferenser/allergier' 
-            type="text"  
+            type="text"
+            name='food'
+            value={guest.food}
+            onChange={handleFood}
         />
         <input 
-            placeholder='Önskelåt' 
+            placeholder='Önskelåt (låt, artist) ' 
             type="text" 
+            name='song'
+            value={guest.song}
+            onChange={handleSong}
         />
 
         <button
