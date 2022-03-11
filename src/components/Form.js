@@ -2,9 +2,10 @@ import React, {useState} from 'react'
 
 function Form() {
     
-    const [guests, setGuests] = useState([])
+    const [guestList, setGuestList] = useState([])
     //hook to allow guests to RSVP with their info
     const [guest, setGuest] = useState({
+      id: "",
       firstName: "",
       lastName: "",
       food: "",
@@ -40,10 +41,34 @@ function Form() {
         })
     }
 
+    //doesnt work because changing controlled input to be uncontrolled, prolly need to remove one of the hooks
+    const addGuest = (newGuest) => {
+        setGuestList([
+            ...guestList,
+            newGuest
+        ])
+    }
+    //function to add new guest to the guests array
+    // Doesnt work atm, because changing controlled to uncontrolled.
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        const newGuest = {
+            id: Math.random() * 100,
+            firstName: guest.firstName,
+            lastName: guest.lastName,
+            food: guest.food,
+            song: guest.song,
+        }
+
+        addGuest(newGuest)
+        console.log(guestList)
+
+        setGuest("")
+    }
     
-  
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
         <input 
             placeholder='Förnamn' 
             type="text" 
@@ -80,6 +105,11 @@ function Form() {
         </button>
         <div>
             {JSON.stringify(guest)}
+            {/* {
+                guestList.map( newGuest => (
+                    <p key={newGuest.id}> {newGuest} </p>
+                ))
+            } */}
         </div>
     </form>
   )
