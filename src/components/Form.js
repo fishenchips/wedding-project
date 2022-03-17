@@ -2,7 +2,11 @@ import React, {useState} from 'react'
 
 function Form() {
     
-    const [guestList, setGuestList] = useState([])
+/*     const [guestList, setGuestList] = useState([])
+
+        removing this for now to try push() instead
+*/    
+
     //hook to allow guests to RSVP with their info
     const [guest, setGuest] = useState({
       id: "",
@@ -42,12 +46,20 @@ function Form() {
     }
 
     //doesnt work because changing controlled input to be uncontrolled, prolly need to remove one of the hooks
-    const addGuest = (newGuest) => {
+   /*  const addGuest = (newGuest) => {
         setGuestList([
             ...guestList,
             newGuest
         ])
     }
+    
+            removing this for now
+    
+    */
+
+
+    console.log(guest)
+
     //function to add new guest to the guests array
     // Doesnt work atm, because changing controlled to uncontrolled.
     const handleSubmit = (e) => {
@@ -59,12 +71,12 @@ function Form() {
             lastName: guest.lastName,
             food: guest.food,
             song: guest.song,
-        }
+        };
 
-        addGuest(newGuest)
-        console.log(guestList)
+        setGuest(newGuest);
 
-        setGuest("")
+        console.log(guest)
+
     }
     
   return (
