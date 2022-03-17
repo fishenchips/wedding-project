@@ -2,14 +2,9 @@ import React, {useState} from 'react'
 
 function Form() {
     
-/*     const [guestList, setGuestList] = useState([])
-
-        removing this for now to try push() instead
-*/    
-
     //hook to allow guests to RSVP with their info
     const [guest, setGuest] = useState({
-      id: "",
+      id: Math.random() * 1000,
       firstName: "",
       lastName: "",
       food: "",
@@ -18,19 +13,20 @@ function Form() {
 
     //function to set firstName in guest - setGuest to whatever is in the guest object, but overwrite value for firstName
     const handleFirstName = (e) => {
+        
         setGuest({
             ...guest,
             firstName: e.target.value
-        })
-    } 
+        }) 
+    }
 
     const handleLastName = (e) => {
         setGuest({
             ...guest,
             lastName: e.target.value
         })
-    }
-
+    } 
+ 
     const handleFood = (e) => {
         setGuest({
             ...guest,
@@ -43,40 +39,14 @@ function Form() {
             ...guest,
             song: e.target.value
         })
-    }
+    } 
 
-    //doesnt work because changing controlled input to be uncontrolled, prolly need to remove one of the hooks
-   /*  const addGuest = (newGuest) => {
-        setGuestList([
-            ...guestList,
-            newGuest
-        ])
-    }
-    
-            removing this for now
-    
-    */
-
-
-    console.log(guest)
-
-    //function to add new guest to the guests array
-    // Doesnt work atm, because changing controlled to uncontrolled.
+    //function to add new guest -- For now there is no array, one is only able to add an object
+    //will be store somewhere later
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        const newGuest = {
-            id: Math.random() * 100,
-            firstName: guest.firstName,
-            lastName: guest.lastName,
-            food: guest.food,
-            song: guest.song,
-        };
-
-        setGuest(newGuest);
-
         console.log(guest)
-
     }
     
   return (
