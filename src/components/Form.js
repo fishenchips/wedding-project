@@ -1,5 +1,9 @@
 import React, {useState} from 'react'
 
+// Todo: Add an optional second form so one can RSVP for their partner as well
+// animations and styling
+// break out Form App (functions etc) and Form as two components
+
 function Form() {
     
     //hook to allow guests to RSVP with their info
