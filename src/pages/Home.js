@@ -1,9 +1,10 @@
 import React from 'react'
+import BannerPic from '../components/BannerPic'
 
 function Home() {
   return (
     <div>
-      <img src="../images/demo.jpg" alt='Demo Pic' />
+      <BannerPic />
     </div>
   )
 }

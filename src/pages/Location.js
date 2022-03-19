@@ -1,5 +1,4 @@
 import React from 'react'
-import Locale from '../components/Locale'
 import WeddingCeremony from '../components/WeddingCeremony'
 
 /*      Todo : Adding info how to get there
@@ -10,8 +9,6 @@ function Location() {
   return (
     <div>
       <WeddingCeremony />
-
-      <Locale />
     </div>
   )
 }

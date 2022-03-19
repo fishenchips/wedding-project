@@ -7,8 +7,9 @@ function Navbar() {
     <div>
       <div className='navbar'>
         <Link to="/">Start</Link>
+        <Link to="/vigsel">Vigsel</Link>
+        <Link to="/sittning">Sittning</Link>
         <Link to="/boende">Boende</Link>
-        <Link to="/plats">Plats</Link>
         <Link to="osa">OSA</Link>
       </div>
       
