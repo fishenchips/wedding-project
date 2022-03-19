@@ -5,12 +5,14 @@ import Countdown from './Countdown';
 function Navbar() {
   return (
     <div>
+      <div className='navbar'>
         <Link to="/">Start</Link>
         <Link to="/boende">Boende</Link>
         <Link to="/plats">Plats</Link>
         <Link to="osa">OSA</Link>
-
-        <Countdown />
+      </div>
+      
+      <Countdown />
     </div>
   )
 }

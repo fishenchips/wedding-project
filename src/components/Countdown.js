@@ -12,7 +12,7 @@ function Countdown() {
 
     const startTimer= () => {
         // date of wedding
-        const countDownDate = new Date("September 10, 2022 13:18").getTime()
+        const countDownDate = new Date("September 10, 2022 13:00").getTime()
 
         interval= setInterval( ()=> {
             const now = new Date().getTime();
@@ -49,10 +49,10 @@ function Countdown() {
     <section className='timerContainer'>
         <section className='timer'>
             <div className='clock'>
-                <p>{timerDays} dagar</p>
-                <p>{timerHours} timmar</p>
-                <p>{timerMin} minuter</p>
-                <p>{timerSec} sekunder</p>
+                <p className='dagar'>{timerDays} Dagar</p>
+                <p className='timmar'>{timerHours} Timmar</p>
+                <p className='minuter'>{timerMin} Minuter</p>
+                <p className='sekunder'>{timerSec} Sekunder</p>
             </div>
         </section>
     </section>

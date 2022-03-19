@@ -3,6 +3,8 @@ import React, {useState} from 'react'
 // Todo: Add an optional second form so one can RSVP for their partner as well
 // animations and styling
 // break out Form App (functions etc) and Form as two components
+// add option kommer / inte kommer
+// om man inte kommer, extra drop down där man kan skicka en hälsning till brudparet
 
 function Form() {
     
