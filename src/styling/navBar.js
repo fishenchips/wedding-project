@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const NavBar = styled.div`
-    border: 1px solid hotpink;
     width: 80%;
     margin: 0 auto;
     margin-top: 0.5rem;
@@ -10,7 +9,6 @@ export const NavBar = styled.div`
 `
 
 export const Clock = styled.div`
-    border: 1px solid hotpink;
     width: 80%;
     margin: 0 auto;
     margin-top: 0.5rem;
@@ -19,7 +17,6 @@ export const Clock = styled.div`
 `
 
 export const Days = styled.p`
-    border: 1px solid blue;
     margin: 1rem;
     font-size: 0.8rem;
 `
