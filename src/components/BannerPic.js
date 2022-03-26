@@ -1,10 +1,12 @@
-import React from 'react'
+import React from 'react';
+import { BannerDiv, BannerImg } from "../styling/bannerPic";
+
 
 function BannerPic() {
   return (
-    <div>
-      <img src={require('../images/demo.jpg') }alt='Hello'/>
-    </div>
+    <BannerDiv>
+      <BannerImg src={require('../images/demo.jpg') }alt='Hello'/>
+    </BannerDiv>
   )
 }
 

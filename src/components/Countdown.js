@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react'
+import { Clock, Days, Hours, Minutes, Seconds } from "../styling/navBar"
 
 function Countdown() {
     //Creating hooks for days, hours, minutes and seconds remaining
@@ -48,12 +49,12 @@ function Countdown() {
   return (
     <section className='timerContainer'>
         <section className='timer'>
-            <div className='clock'>
-                <p className='dagar'>{timerDays} Dagar</p>
-                <p className='timmar'>{timerHours} Timmar</p>
-                <p className='minuter'>{timerMin} Minuter</p>
-                <p className='sekunder'>{timerSec} Sekunder</p>
-            </div>
+            <Clock>
+                <Days>{timerDays} Dagar</Days>
+                <Hours>{timerHours} Timmar</Hours>
+                <Minutes>{timerMin} Minuter</Minutes>
+                <Seconds>{timerSec} Sekunder</Seconds>
+            </Clock>
         </section>
     </section>
   )
