@@ -1,14 +1,14 @@
 import React from 'react';
 import {Link} from "react-router-dom";
 import Countdown from './Countdown';
-import { NavBar } from "../styling/navBar"
+import { NavBar, OuterNavbar } from "../styling/navBar"
 
 // Todo: Style Link - remove underline, change initial color, "visited color", "while pressed color" 
 //"and add color to show which one is "active""
 
 function Navbar() {
   return (
-    <div>
+    <OuterNavbar>
       <NavBar>
         <Link to="/">Start</Link>
         <Link to="/vigsel">Vigsel</Link>
@@ -18,7 +18,7 @@ function Navbar() {
       </NavBar>
       
       <Countdown />
-    </div>
+    </OuterNavbar>
   )
 }
 

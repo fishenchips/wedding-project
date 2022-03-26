@@ -1,5 +1,10 @@
 import styled from "styled-components";
 
+export const OuterNavbar = styled.div`
+    margin-bottom: 1.5rem;
+`
+
+
 export const NavBar = styled.div`
     width: 80%;
     margin: 0 auto;

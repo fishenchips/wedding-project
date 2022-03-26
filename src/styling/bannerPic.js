@@ -9,5 +9,4 @@ export const BannerDiv = styled.div`
 
 export const BannerImg = styled.img`
     width: 100%;
-    margin-top: 1.5rem;
 `
